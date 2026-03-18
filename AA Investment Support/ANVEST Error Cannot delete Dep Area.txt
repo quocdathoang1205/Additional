@@ -1,0 +1,3 @@
+Eventhough the DepArea deleted, no record in ChartofDep T093
+then use FM AA_AFABER_DELETE to delete
+https://community.sap.com/t5/enterprise-resource-planning-q-a/delete-depreciation-area/qaq-p/4477029

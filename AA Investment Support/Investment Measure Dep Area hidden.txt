@@ -1,0 +1,19 @@
+FM decide IM_T093_READ the Investment Measure DepArea
+It reads T093, T093A, T093B, T093T, the original way to differentiate based on T093A Type 08
+But for ECC, it auto gets somehow in table G_X093 during debugging in Y_903 subtable
+for HANA, it doesn't so Y_903 is initially blank
+However later on during this code:
+  LOOP AT T_X093.
+*                                      Investitionszuschuß-Bereich
+    IF T_X093-VZANSW  = CON_0      AND
+     ( T_X093-VZINVZ  = CON_STRICH  OR
+       T_X093-VZINVZ  = CON_PLUS   ).
+      APPEND T_X093 TO T_Y093.
+    ENDIF.
+  ENDLOOP.
+It checks against X_903 table if settings in OADB met 2 conditions:
+- Acquisition Value set "No Value Allowed"
+- Investment Grants set to Only Positive + or Only Negative -
+Then it moves line that fit to Y_903 table, thus enable the behavior that:
+AS01 to create asset (It begins with include LAISTF0J), if we select the investment key in Allocation Tab then auto Dep Area of Investment Measure appears (via include LAISTF22)
+If we dont select then it's hidden without error
