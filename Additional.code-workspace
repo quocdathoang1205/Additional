@@ -5,6 +5,12 @@
 		}
 	],
 	"settings": {
-		"github.copilot.chat.virtualTools.threshold": 0
+		"github.copilot.chat.virtualTools.threshold": 0,
+		"python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+		"python.terminal.activateEnvironment": true,
+		"python.analysis.autoSearchPaths": true,
+		"python.analysis.extraPaths": [
+			"${workspaceFolder}/.venv/Lib/site-packages"
+		]
 	}
 }
