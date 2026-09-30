@@ -1,0 +1,19 @@
+Watching Microsoft Teams badge + incoming calls... (Ctrl+C to stop)
+Traceback (most recent call last):
+  File "C:\Users\70023796\Desktop\Project\Main_Link\RepoGit\Additional\Teamsnoti.py", line 167, in <module>
+    main()
+  File "C:\Users\70023796\Desktop\Project\Main_Link\RepoGit\Additional\Teamsnoti.py", line 161, in main
+    watch_teams()
+  File "C:\Users\70023796\Desktop\Project\Main_Link\RepoGit\Additional\Teamsnoti.py", line 139, in watch_teams
+    count = get_unread_count()
+            ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\70023796\Desktop\Project\Main_Link\RepoGit\Additional\Teamsnoti.py", line 64, in get_unread_count
+    button = _find_teams_taskbar_button()
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\70023796\Desktop\Project\Main_Link\RepoGit\Additional\Teamsnoti.py", line 48, in _find_teams_taskbar_button
+    if "Shell_TrayWnd" not in (win.ClassName or ""):
+                               ^^^^^^^^^^^^^
+  File "C:\Users\70023796\Desktop\Project\Main_Link\RepoGit\Additional\.venv\Lib\site-packages\uiautomation\uiautomation.py", line 6628, in ClassName
+    return self.Element.CurrentClassName
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ctypes.COMError: (-2147220991, 'An event was unable to invoke any of the subscribers', (None, None, None, 0, None))
